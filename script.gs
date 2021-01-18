@@ -1,7 +1,6 @@
 //  Скрипт Google Apps Script для создания
 //  нового пользователя в Google Workspace
-
-    // используйте сервис AdminDirectory 
+ // используйте сервис AdminDirectory 
 
 primaryEmail = 'love.pelmeshki@mindbox.com'
 givenName = 'Alexey'
@@ -17,8 +16,7 @@ function addUser() {
     // Generate a random password string.
     password: Math.random().toString(36)
   };
-    
-
+  
   user = AdminDirectory.Users.insert(user);
   Logger.log('User %s created with ID %s.', user.primaryEmail, user.id);
 }
